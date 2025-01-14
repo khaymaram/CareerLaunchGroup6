@@ -12,7 +12,7 @@ function App() {
         <p>Welcome to College Friendly Meals</p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.allrecipes.com/gallery/cheap-and-easy-meals-for-college-students/"
           target="_blank"
           rel="noopener noreferrer"
         >
