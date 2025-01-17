@@ -1,0 +1,22 @@
+.HomePage {
+    text-align: center;
+    min-height: 100vh; 
+    background-color: #f0f4f8; 
+  }
+  
+  .HomePage-header {
+    position: fixed;
+    top: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(5px + 5vmin);
+    color: #043437;
+    height: 60px; 
+  }
+
+  .HomePage-header img {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
