@@ -1,22 +1,82 @@
+html, body {
+  margin: 0; /* Removes browser default margin */
+  padding: 0; /* Removes default padding */
+  height: 100%; /* Ensures they span the full viewport height */
+  background-color: #ffffff;  
+}
+
 .HomePage {
     text-align: center;
-    min-height: 100vh; 
-    background-color: #f0f4f8; 
+    min-height: 100%;
   }
   
   .HomePage-header {
-    position: fixed;
-    top: 25px;
+    position: relative;
+    padding-top: 25px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: calc(5px + 5vmin);
-    color: #043437;
+    color: #103516;
     height: 60px; 
+    text-shadow: 0px 2px 2px #103516
   }
 
   .HomePage-header img {
-    margin-left: 20px;
-    margin-top: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
   }
+
+  .HomePage-content {
+    display: flex;
+    justify-content: space-around; /* Space evenly between sections */
+    align-items: flex-start; /* Align sections at the top */
+    margin-top: 65px;
+    padding: 0 20px;
+  }
+  
+  .HomePage-ingredients, .HomePage-recipes {
+    background-color: #AFBEA4;
+    padding: 20px;
+    box-sizing: content-box;
+    border-radius: 8px;
+    position: relative; /* Ensures subheading is positioned relative to this block */
+  }
+  
+  .HomePage-ingredients {
+    flex: 1; /* Takes 1 part of the available space */
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+
+  .HomePage-ingredients div {
+    width: 90%;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+
+  .HomePage-ingredients label {
+    font-size: calc(2px + 3vmin);
+    color: #1b4a23;
+    cursor: pointer;
+  }
+  
+  .HomePage-recipes {
+    flex: 2; /* Takes 2 parts of the available space */
+    background-color: #FDFCDC;
+  }
+
+  .HomePage-subheading {
+    position: relative; /* Position within the parent block */
+    top: 0; /* Align to the top of the parent */
+    margin-bottom: 20px;
+    font-size: calc(3px + 5vmin);
+    color: #103516;
+    text-align: center; /* Centers text within the block */
+  }
+
+
