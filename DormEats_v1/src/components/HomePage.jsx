@@ -21,28 +21,28 @@ const HomePage = () => {
 
             <div>
               <label>
-                <input type="checkbox" name="ingredient" value="eggs" />
+                <input type="checkbox" name="ingredient" value="bread" />
                 Bread
               </label> 
             </div>
 
             <div>
               <label>
-                <input type="checkbox" name="ingredient" value="eggs" />
+                <input type="checkbox" name="ingredient" value="pasta" />
                 Pasta
               </label> 
             </div>
 
             <div>
               <label>
-                <input type="checkbox" name="ingredient" value="eggs" />
+                <input type="checkbox" name="ingredient" value="spinach" />
                 Spinach
               </label> 
             </div>
 
             <div>
               <label>
-                <input type="checkbox" name="ingredient" value="eggs" />
+                <input type="checkbox" name="ingredient" value="cheese" />
                 Cheese
               </label> 
             </div>
