@@ -5,6 +5,10 @@ html, body {
   background-color: #ffffff;  
 }
 
+ul {
+  list-style-type: none; /* Removes bullets */
+}
+
 .HomePage {
     text-align: center;
     min-height: 100%;
@@ -44,6 +48,7 @@ html, body {
     position: relative; /* Ensures subheading is positioned relative to this block */
     flex-direction: column; /* Aligns content vertically inside the box */
     flex-grow: 1; /* Allows both sections to grow and match heights */
+    margin-bottom: 15px;
   }
   
   .HomePage-ingredients {
