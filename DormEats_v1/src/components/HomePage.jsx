@@ -46,11 +46,20 @@ const HomePage = () => {
                 Cheese
               </label> 
             </div>
+
+            <div>
+              <label>
+                <input type="checkbox" name="ingredient" value="butter" />
+                Butter
+              </label> 
+            </div>
         </div>
 
         <div className='HomePage-recipes'>
           <h2 className='HomePage-subheading'>Recipes</h2>
-          <p>grid of recipes here</p>
+          <p className='HomePage-recipeBlock'>Recipe 1</p>
+          <p className='HomePage-recipeBlock'>Recipe 2</p>
+          <p className='HomePage-recipeBlock'>Recipe 3</p>
         </div>
       </div>
     </div>

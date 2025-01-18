@@ -46,7 +46,7 @@ html, body {
   
   .HomePage-ingredients {
     flex: 1; /* Takes 1 part of the available space */
-    margin-right: 10px;
+    margin-right: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,15 +59,28 @@ html, body {
     margin-bottom: 10px;
   }
 
-  .HomePage-ingredients label {
+  .HomePage-ingredients label, .HomePage-recipeBlock {
     font-size: calc(2px + 3vmin);
     color: #1b4a23;
-    cursor: pointer;
   }
   
   .HomePage-recipes {
     flex: 2; /* Takes 2 parts of the available space */
     background-color: #FDFCDC;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around; /* Space evenly between sections */
+  }
+
+  .HomePage-recipeBlock {
+    flex: 3;
+    background-color: #AFBEA4;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    position: relative;
+    margin: 10px 0; /* Adds vertical spacing between blocks */
+    cursor: pointer;
   }
 
   .HomePage-subheading {
