@@ -2,8 +2,11 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from './components/HomePage';
 import OpenRecipe from './components/OpenRecipe';
+import supabase from './supabase-client';
+
 
 function App() {
+
   return (
       <BrowserRouter>
         <Routes>
@@ -11,6 +14,7 @@ function App() {
           <Route path="/recipe" element={<OpenRecipe />} />
         </Routes>
       </BrowserRouter>
+      
   );
 }
 
