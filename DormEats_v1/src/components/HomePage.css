@@ -75,6 +75,7 @@ ul {
     background-color: #FDFCDC;
     display: flex;
     justify-content: space-around; /* Space evenly between sections */
+    padding-top: 75px;
   }
 
   .HomePage-recipeBlock {
@@ -89,12 +90,15 @@ ul {
   }
 
   .HomePage-subheading {
-    position: relative; /* Position within the parent block */
-    top: 0; /* Align to the top of the parent */
+    position: absolute; /* Absolute position */
+    top: 20px; /* Adjust this to move it to the desired spot */
+    left: 50%; /* Centers the subheading horizontally */
+    transform: translateX(-50%); /* Centers the subheading */
     margin-bottom: 20px;
     font-size: calc(3px + 5vmin);
     color: #103516;
     text-align: center; /* Centers text within the block */
+    z-index: 1;
   }
 
 
