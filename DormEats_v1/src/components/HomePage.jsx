@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import './HomePage.css'
 
 const HomePage = () => {
@@ -58,6 +59,7 @@ const HomePage = () => {
         <div className='HomePage-recipes'>
           <h2 className='HomePage-subheading'>Recipes</h2>
           <p className='HomePage-recipeBlock'>Recipe 1</p>
+          <Link to="/recipe" >Go to Recipe</Link>
           <p className='HomePage-recipeBlock'>Recipe 2</p>
           <p className='HomePage-recipeBlock'>Recipe 3</p>
         </div>

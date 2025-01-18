@@ -1,0 +1,25 @@
+html, body {
+    margin: 0; /* Removes browser default margin */
+    padding: 0; /* Removes default padding */
+    height: 100%; /* Ensures they span the full viewport height */
+    background-color: #ffffff;  
+  }
+  
+  .OpenRecipe {
+      text-align: center;
+      min-height: 100%;
+    }
+    
+    .OpenRecipe-header {
+      position: relative;
+      padding-top: 25px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(5px + 5vmin);
+      color: #103516;
+      height: 60px; 
+      text-shadow: 0px 2px 2px #103516
+    }
+  
