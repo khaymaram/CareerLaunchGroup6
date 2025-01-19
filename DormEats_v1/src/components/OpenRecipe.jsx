@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './OpenRecipe.css'
+import supabase from '../supabase-client';
 
 const OpenRecipe = () => {
     return (
@@ -8,6 +9,7 @@ const OpenRecipe = () => {
             <h1>Recipe Name</h1>
             </header>
         </div>
+        
     );
 }
 

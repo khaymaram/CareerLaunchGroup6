@@ -15,57 +15,35 @@ const HomePage = () => {
       setRecipes(data);
     }
 
+    const [ingredients, setIngredients] = useState([]);
+
+    useEffect(() => {
+      getIngredients();
+    }, []);
+
+    async function getIngredients() {
+      const {data} = await supabase.from("Ingredients-Table").select();
+      setIngredients(data);
+    }
+
   return (
     <div className='HomePage'>
       <header className='HomePage-header'>
         <h1>Dorm Eats</h1>
-        <img src='https://cdn-icons-png.flaticon.com/512/8382/8382732.png' width= '75px' height = '75px' alt='logo'/>
+        <img src='logo_v2.png' width= '100px' height = '100px' alt='logo'/>
       </header>
 
       <div className='HomePage-content'>
         <div className='HomePage-ingredients'>
           <h2 className='HomePage-subheading'>Select Ingredients</h2>
-            <div>
-              <label>
-                <input type="checkbox" name="ingredient" value="eggs" />
-                Eggs
-              </label> 
-            </div>
-
-            <div>
-              <label>
-                <input type="checkbox" name="ingredient" value="bread" />
-                Bread
-              </label> 
-            </div>
-
-            <div>
-              <label>
-                <input type="checkbox" name="ingredient" value="pasta" />
-                Pasta
-              </label> 
-            </div>
-
-            <div>
-              <label>
-                <input type="checkbox" name="ingredient" value="spinach" />
-                Spinach
-              </label> 
-            </div>
-
-            <div>
-              <label>
-                <input type="checkbox" name="ingredient" value="cheese" />
-                Cheese
-              </label> 
-            </div>
-
-            <div>
-              <label>
-                <input type="checkbox" name="ingredient" value="butter" />
-                Butter
-              </label> 
-            </div>
+            {ingredients.map((ingredient) => (
+              <div key={ingredient.id}>
+                <label>
+                  <input type="checkbox" name="ingredient" value={ingredient.name} />
+                  {ingredient.name}
+                </label>
+              </div>
+            ))}
         </div>
 
         <div className='HomePage-recipes'>
