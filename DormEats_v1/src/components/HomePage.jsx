@@ -5,9 +5,12 @@ import supabase from '../supabase-client';
 
 const HomePage = () => {
     const [recipes, setRecipes] = useState([]);
+    const [ingredients, setIngredients] = useState([]);
+    const [selectedIngredients, setSelectedIngredients] = useState([]);
 
     useEffect(() => {
       getRecipes();
+      getIngredients();
     }, []);
   
     async function getRecipes() {
@@ -15,15 +18,29 @@ const HomePage = () => {
       setRecipes(data);
     }
 
-    const [ingredients, setIngredients] = useState([]);
-
-    useEffect(() => {
-      getIngredients();
-    }, []);
-
     async function getIngredients() {
       const {data} = await supabase.from("Ingredients-Table").select();
       setIngredients(data);
+    }
+
+    const handleIngredientSelection = (e) => {
+      const {value, checked} = e.target;
+
+      if (checked) {
+        setSelectedIngredients((prev) => [...prev, value]);
+      } else {
+        setSelectedIngredients((prev) => prev.filter((ingredient) => ingredient !== value));
+      }
+    }
+
+    let filteredRecipes;
+
+    if (selectedIngredients.length === 0){
+      filteredRecipes = recipes;
+    } else {
+      filteredRecipes = recipes.filter((recipe) => 
+        selectedIngredients.every((ingredient) => recipe.ingredients.includes(ingredient))
+      );
     }
 
   return (
@@ -39,7 +56,7 @@ const HomePage = () => {
             {ingredients.map((ingredient) => (
               <div key={ingredient.id}>
                 <label>
-                  <input type="checkbox" name="ingredient" value={ingredient.name} />
+                  <input type="checkbox" name="ingredient" value={ingredient.name} onChange={handleIngredientSelection}/>
                   {ingredient.name}
                 </label>
               </div>
@@ -49,14 +66,17 @@ const HomePage = () => {
         <div className='HomePage-recipes'>
           <h2 className='HomePage-subheading'>Recipes</h2>
           <ul>
-            {recipes.map((recipe) => (
+            { filteredRecipes.length === 0 ? (
+              <h3 className='HomePage-recipeBlock'>No recipes available</h3>
+            ) : (
+              filteredRecipes.map((recipe) => (
                 <li key={recipe.id} className='HomePage-recipeBlock'>
                   <strong>{recipe.name}</strong>
-                  <div>
-                      {recipe.ingredients.join(", ")}
-                  </div>
+                  <div>{recipe.ingredients.join(', ')}</div>
                 </li>
-            ))}
+              ))
+            )
+            }
           </ul>
           <Link to="/recipe" >Go to Recipe</Link>        
         </div>
