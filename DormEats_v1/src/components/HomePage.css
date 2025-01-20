@@ -1,6 +1,5 @@
+/* Global Styles */
 html, body {
-  margin: 0; /* Removes browser default margin */
-  padding: 0; /* Removes default padding */
   height: 100%; /* Ensures they span the full viewport height */
   background-color: #ffffff;  
 }
@@ -9,11 +8,13 @@ ul {
   list-style-type: none; /* Removes bullets */
 }
 
+/* HomePage Styles */
 .HomePage {
     text-align: center;
     min-height: 100%;
   }
   
+  /* Header Section */
   .HomePage-header {
     position: relative;
     padding-top: 25px;
@@ -28,10 +29,10 @@ ul {
   }
 
   .HomePage-header img {
-    padding-left: 20px;
-    padding-top: 10px;
+    padding: 10px 0 0 20px;
   }
 
+  /* Content Section */
   .HomePage-content {
     display: flex;
     justify-content: space-around; /* Space evenly between sections */
@@ -39,7 +40,18 @@ ul {
     margin-top: 65px;
     padding: 0 20px;
   }
+
+  /* Subheading */
+  .HomePage-subheading {
+    position: relative; 
+    margin-bottom: 20px;
+    font-size: calc(3px + 5vmin);
+    color: #103516;
+    text-align: center; 
+    z-index: 1; /* Makes sure subheading is above other elements */
+  }
   
+  /* Ingredients and Recipes Shared Styles (main boxes)*/
   .HomePage-ingredients, .HomePage-recipes { 
     background-color: #AFBEA4;
     padding: 20px;
@@ -51,52 +63,48 @@ ul {
     margin-bottom: 15px; /* Leaves space between bottom of page and the blocks */
   }
   
+  /* Ingredients Section */
   .HomePage-ingredients {
     flex: 1; /* Takes 1 part of the available space */
     margin-right: 15px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    position: relative; /* Keeps the subheading in context */
   }
 
+  /* Checklist */
   .HomePage-ingredients div {
     width: 90%;
     text-align: justify;
     margin-bottom: 10px;
-    align-items: center;
   }
 
-  .HomePage-ingredients label, .HomePage-recipeBlock {
-    font-size: calc(2px + 3vmin);
+
+  .HomePage-ingredients label {
+    font-size: calc(2px + 3.5vmin);
     color: #1b4a23;
   }
   
+  /* Recipes Section */
   .HomePage-recipes {
     flex: 2; /* Takes 2 parts of the available space */
     background-color: #FDFCDC;
     display: flex;
-    justify-content: flex-start; /* Space evenly between sections */
+    flex-direction: column;
+    justify-content: flex-start 
   }
 
+  /* Recipe Blocks */
   .HomePage-recipeBlock {
-    flex: 3;
+    font-size: calc(2px + 3vmin);
+    color: #1b4a23;
     background-color: #AFBEA4;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 8px;
-    position: relative;
-    margin: 10px 0; /* Adds vertical spacing between blocks */
+    margin: 10px auto auto -35px; /* Adds vertical spacing between blocks and makes block more centered*/
     cursor: pointer;
   }
 
-  .HomePage-subheading {
-    position: relative; 
-    margin-bottom: 20px;
-    font-size: calc(3px + 5vmin);
-    color: #103516;
-    text-align: center; /* Centers text within the block */
-    z-index: 1;
-  }
 
 
