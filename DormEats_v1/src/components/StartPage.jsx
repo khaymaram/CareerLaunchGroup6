@@ -7,7 +7,7 @@ const StartPage = () => {
     return (
         <div className='StartPage'>
             <header>
-                <img src='logo_v3.png' alt='main-logo'/>
+                <img src='logo_gif.gif' alt='main-logo'/>
             </header> 
             <div>
                 <Link to="/home">

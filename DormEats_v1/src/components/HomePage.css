@@ -56,7 +56,7 @@ ul {
     background-color: #AFBEA4;
     padding: 20px;
     box-sizing: content-box;
-    border-radius: 8px;
+    border-radius: 20px;
     position: relative; /* Ensures subheading is positioned relative to this block */
     flex-direction: column; /* Aligns content vertically inside the box */
     flex-grow: 1; /* Allows both sections to grow and match heights */
@@ -98,10 +98,10 @@ ul {
   .HomePage-recipeBlock {
     font-size: calc(2px + 3vmin);
     color: #1b4a23;
-    background-color: #AFBEA4;
+    background-color: #ffc95c;
     padding: 20px;
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 15px;
     margin: 10px auto auto -35px; /* Adds vertical spacing between blocks and makes block more centered*/
     cursor: pointer;
   }
