@@ -1,0 +1,27 @@
+/* StartPage Styles */
+.StartPage {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    min-height: 100vh; 
+    background-color: #AFBEA4; 
+}
+
+.StartPage img {
+    padding: 10px;
+    margin: 0 0 10px 0;
+    width: calc(330px + 5vmin);
+    height: calc(300px + 5vmin);
+}
+
+.StartPage button{
+    padding: 20px;
+    border-radius: 20px;
+    font-size: large;
+    font-weight: bold;
+    background-color: #FDFCDC;
+    color: #103516;
+    border-width: 0;
+    box-shadow: 0px 2px 2px #103516;
+}
