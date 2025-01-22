@@ -6,10 +6,11 @@
     flex-direction: column;
     min-height: 100vh; 
     background-color: #AFBEA4;
-    background-image: url('bg2.svg');
+    background-image: url('bg3.svg');
     /* Center and scale the image nicely */
     background-position: center;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .StartPage img {
@@ -21,6 +22,7 @@
 
 .StartPage button{
     padding: 25px;
+    font-family: "Open Sans", serif;
     border-radius: 20px;
     font-size: large;
     font-weight: bold;
