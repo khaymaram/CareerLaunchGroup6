@@ -6,7 +6,7 @@ This Career Launch Project was created with Vite and React.js and is a prototype
 
 We plan to format it in a way so that users can simply tick off ingredients they have and be matched with the most feasible recipe. Once a recipe is selected, the user will be redirected to a dedicated page that provides more details about the recipe, including step-by-step instructions, estimated preparation and cooking time, and any additional ingredients or tools they may need. This layout ensures a user-friendly experience while making it easy for college students to cook delicious meals with minimal effort.
 
-Future features we hope to implement in the future include, but are not limited to, dietary restriction filters, the ability for users to add their own recipes and save favorite recipes, and a cost estimator for ingredients as well as the nearest places to purchase them.
+Features we hope to implement in the future include, but are not limited to, dietary restriction filters, the ability for users to add their own recipes and save favorite recipes, and a cost estimator for ingredients as well as the nearest places to purchase them.
 
 
 
