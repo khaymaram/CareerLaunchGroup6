@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<StartPage />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="/recipe" element={<OpenRecipe />} />
+          <Route path="/recipe/:id" element={<OpenRecipe />} />
         </Routes>
       </BrowserRouter>
       

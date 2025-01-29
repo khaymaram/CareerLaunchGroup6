@@ -14,7 +14,7 @@ const HomePage = () => {
     }, []);
   
     async function getRecipes() {
-      const { data } = await supabase.from("Recipes").select();
+      const {data} = await supabase.from("Recipes").select();
       setRecipes(data);
     }
 
@@ -71,14 +71,17 @@ const HomePage = () => {
             ) : (
               filteredRecipes.map((recipe) => (
                 <li key={recipe.id} className='HomePage-recipeBlock'>
-                  <strong>{recipe.name}</strong>
-                  <div>{recipe.ingredients.join(', ')}</div>
-                </li>
+                    <Link to={`/recipe/${recipe.id}`} className='recipe-link'>
+                      <div className='recipe-block'>
+                        <strong>{recipe.name}</strong>
+                        <div>{recipe.ingredients.join(', ')}</div>
+                      </div>
+                    </Link>
+                  </li>
               ))
             )
             }
-          </ul>
-          <Link to="/recipe" >Go to Recipe</Link>        
+          </ul>     
         </div>
       </div>
     </div>
