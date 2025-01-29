@@ -12,13 +12,13 @@ ul {
 }
 
 /* HomePage Styles */
-.HomePage {
+.OpenRecipe {
   text-align: center;
   min-height: 100%;
 }
 
 /* Header Section */
-.HomePage-header {
+.OpenRecipe-header {
   position: relative;
   padding-top: 25px;
   width: 100%;
@@ -32,37 +32,33 @@ ul {
   letter-spacing: 1.5px;
 }
 
-.HomePage-header img {
+.OpenRecipe-header img {
   padding: 10px 0 0 20px;
 }
 
 /* Content Section */
-.HomePage-content {
+.OpenRecipe-content {
   display: flex;
   justify-content: space-around;
   /* Space evenly between sections */
   align-items: stretch;
   /* Ensures both blocks have equal height */
-  margin-top: 65px;
+  margin-top: 10px;
   padding: 0 20px;
 }
 
 /* Subheading */
-.HomePage-subheading {
-  position: relative;
-  margin-bottom: 20px;
+.OpenRecipe-subheading {
   font-size: calc(3px + 5vmin);
   color: #103516;
   text-align: center;
   font-family: "Vidaloka", serif;
   letter-spacing: 1px;
-  z-index: 1;
-  /* Makes sure subheading is above other elements */
 }
 
 /* Ingredients and Recipes Shared Styles (main boxes)*/
-.HomePage-ingredients,
-.HomePage-recipes {
+.OpenRecipe-ingredients,
+.OpenRecipe-instructions {
   background-color: #AFBEA4;
   padding: 20px;
   box-sizing: content-box;
@@ -78,7 +74,7 @@ ul {
 }
 
 /* Ingredients Section */
-.HomePage-ingredients {
+.OpenRecipe-ingredients {
   flex: 1;
   /* Takes 1 part of the available space */
   margin-right: 15px;
@@ -88,21 +84,21 @@ ul {
 }
 
 /* Checklist */
-.HomePage-ingredients div {
+.OpenRecipe-ingredients div {
   width: 90%;
   text-align: justify;
   margin-bottom: 10px;
 }
 
 
-.HomePage-ingredients label {
+.OpenRecipe-ingredients label, .OpenRecipe-instructions label {
   font-size: calc(2px + 3.5vmin);
   font-family: "Open Sans", serif;
   color: #1b4a23;
 }
 
 /* Recipes Section */
-.HomePage-recipes {
+.OpenRecipe-instructions {
   flex: 2;
   /* Takes 2 parts of the available space */
   background-color: #ffc95c;
@@ -111,24 +107,23 @@ ul {
   justify-content: flex-start
 }
 
-.recipe-link {
-  text-decoration: none;
-  /* Removes underline from links */
-  display: block;
-  /* Makes the link a block element */
-  color: inherit;
+
+.OpenRecipe button{
+  padding: 25px;
+  font-family: "Open Sans", serif;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: bold;
+  background-color: #FDFCDC;
+  color: #103516;
+  border-width: 0;
+  box-shadow: 3px 3px #103516;
+  cursor: pointer;
 }
 
-/* Recipe Blocks */
-.HomePage-recipeBlock {
-  font-size: calc(2px + 3vmin);
-  font-family: "Open Sans", serif;
-  color: #1b4a23;
-  background-color: #FDFCDC;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 20px;
-  margin: 10px auto auto -35px;
-  /* Adds vertical spacing between blocks and makes block more centered*/
-  cursor: pointer;
+.OpenRecipe button:hover{
+  background-color:#103516;
+  color: #FDFCDC;
+  box-shadow: 3px 3px #FDFCDC;
+  transition: 0.25s;
 }
