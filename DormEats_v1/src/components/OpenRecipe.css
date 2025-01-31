@@ -3,7 +3,7 @@ html,
 body {
   height: 100%;
   /* Ensures they span the full viewport height */
-  background-color: #ffffff;
+  background-color: #FDFCDC;
 }
 
 ul {
@@ -104,7 +104,12 @@ ul {
   background-color: #ffc95c;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start
+  text-align: justify;
+  justify-content: flex-start;
+}
+
+.OpenRecipe-instructions div {
+  margin-bottom: 10px; /* Adjust spacing between each step */
 }
 
 
@@ -116,9 +121,10 @@ ul {
   font-weight: bold;
   background-color: #FDFCDC;
   color: #103516;
-  border-width: 0;
-  box-shadow: 3px 3px #103516;
+  border: 2px solid #103516 ;
   cursor: pointer;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .OpenRecipe button:hover{

@@ -43,7 +43,7 @@ const OpenRecipe = () => {
         </div>
 
         <div className='OpenRecipe-instructions'>
-          <h2 className='OpenRecipe-subheading'>Recipes</h2>
+          <h2 className='OpenRecipe-subheading'>Instructions</h2>
           <ul>
             {recipe.instructions.map((instruction, index) => (
               <div key={index}>
