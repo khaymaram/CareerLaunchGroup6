@@ -44,6 +44,13 @@ const OpenRecipe = () => {
 
         <div className='OpenRecipe-instructions'>
           <h2 className='OpenRecipe-subheading'>Instructions</h2>
+          <div className='OpenRecipe-img'>
+            {recipe.image && (
+            <div>
+              <img src={recipe.image} alt={recipe.name} />
+            </div>
+            )}
+          </div>
           <ul>
             {recipe.instructions.map((instruction, index) => (
               <div key={index}>

@@ -106,10 +106,19 @@ ul {
   flex-direction: column;
   text-align: justify;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .OpenRecipe-instructions div {
   margin-bottom: 10px; /* Adjust spacing between each step */
+}
+
+.OpenRecipe-img img{
+  border-radius: 10px;
+  width: 30%;
+  height: 30%;
+  display: block;
+  margin: 0 auto;
 }
 
 
