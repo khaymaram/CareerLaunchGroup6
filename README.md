@@ -1,6 +1,6 @@
 # Dorm Eats
 
-Group Members: Sarayu Jilludumudi, Khaymar Moe, Anushka Varde
+Group Members: Sarayu Jilludumudi, Khaymar Moe
 
 This Career Launch Project was created with Vite and React.js and is a prototype of a "Dorm Eats" website which will allow users to be matched with easy recipes from ingredients they have in their fridge. It is targeted towards college students to assist them in cooking recipes that are quick, budget-friendly, and require minimal ingredients or cooking skills. 
 
